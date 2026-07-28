@@ -17,7 +17,7 @@ import { Feedback } from "./routes/feedback";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         {/* public routes */}
         <Route element={<PublicLayout />}>
