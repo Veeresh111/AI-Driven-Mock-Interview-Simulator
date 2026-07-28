@@ -17,7 +17,7 @@ export const ProfileContainer = () => {
   return (
     <div className="flex items-center gap-6">
       {isSignedIn ? (
-        <UserButton afterSignOutUrl="/" />
+        <UserButton afterSignOutUrl={import.meta.env.BASE_URL} />
       ) : (
         <Link to={"/signin"}>
           <Button size={"sm"}>Get Started</Button>
