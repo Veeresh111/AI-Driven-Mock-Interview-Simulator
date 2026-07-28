@@ -46,7 +46,9 @@ jobs:
         env:
           VITE_BASE_PATH: /AI-Driven-Mock-Interview-Simulator/
         run: |
-          echo "${{ secrets.ENV_FILE }}" > .env
+          if [ -n "${{ secrets.ENV_FILE }}" ]; then
+            echo "${{ secrets.ENV_FILE }}" > .env
+          fi
           pnpm run build
           cp dist/index.html dist/404.html
           touch dist/.nojekyll
