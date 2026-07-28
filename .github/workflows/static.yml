@@ -43,6 +43,8 @@ jobs:
         run: pnpm install
         working-directory: ./Interview-
       - name: Build project
+        env:
+          VITE_BASE_PATH: /AI-Driven-Mock-Interview-Simulator/
         run: |
           echo "${{ secrets.ENV_FILE }}" > .env
           pnpm run build
