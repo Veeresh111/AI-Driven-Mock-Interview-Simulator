@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Home } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface CustomBreadCrumbProps {
   breadCrumbPage: string;
@@ -23,11 +24,13 @@ export const CustomBreadCrumb = ({
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink
-            href="/"
+            asChild
             className="flex items-center justify-center hover:text-emerald-500"
           >
-            <Home className="w-3 h-3 mr-2" />
-            Home
+            <Link to="/">
+              <Home className="w-3 h-3 mr-2" />
+              Home
+            </Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
 
@@ -37,10 +40,10 @@ export const CustomBreadCrumb = ({
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  href={item.link}
+                  asChild
                   className="hover:text-emerald-500"
                 >
-                  {item.label}
+                  <Link to={item.link}>{item.label}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </React.Fragment>
