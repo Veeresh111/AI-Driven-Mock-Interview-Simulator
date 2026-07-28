@@ -50,6 +50,9 @@ const App = () => {
             <Route path="feedback/:interviewId" element={<Feedback />} />
           </Route>
         </Route>
+
+        {/* wildcard route to catch 404s */}
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
   );

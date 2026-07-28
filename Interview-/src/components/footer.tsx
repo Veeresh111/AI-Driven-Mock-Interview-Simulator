@@ -73,13 +73,13 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul>
-              <FooterLink to="/services/interview-prep">
+              <FooterLink to="/generate">
                 Interview Preparation
               </FooterLink>
-              <FooterLink to="/services/career-coaching">
+              <FooterLink to="/generate">
                 Career Coaching
               </FooterLink>
-              <FooterLink to="/services/resume-building">
+              <FooterLink to="/generate">
                 Resume Building
               </FooterLink>
             </ul>
