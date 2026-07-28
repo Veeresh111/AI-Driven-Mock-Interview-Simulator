@@ -45,6 +45,8 @@ jobs:
       - name: Build project
         run: pnpm run build
         working-directory: ./Interview-
+        env:
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ secrets.VITE_CLERK_PUBLISHABLE_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
