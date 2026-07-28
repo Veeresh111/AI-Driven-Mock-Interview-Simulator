@@ -46,6 +46,7 @@ jobs:
         run: |
           echo "${{ secrets.ENV_FILE }}" > .env
           pnpm run build
+          cp dist/index.html dist/404.html
         working-directory: ./Interview-
       - name: Setup Pages
         uses: actions/configure-pages@v5
